@@ -111,6 +111,32 @@
                     </div>
                 </div>
             </div>
+            <div class="col mb-3">
+                <div class="card shadow-sm prompt">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">撰寫測試</h5>
+                        <p class="card-text prompt__content" data-content="我有一段 [程式語言] 的程式碼，如下：[程式碼]，幫我寫一個測試，至少要提供五個測試案例，要包含到極端的狀況。">
+                            我有一段<span class="keyword">程式語言</span>的程式碼，如下：<span class="keyword">程式碼</span>，幫我寫一個測試，至少要提供五個測試案例，要包含到極端的狀況。
+                        </p>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-info text-white me-2 collapse-button" type="button">
+                                填入資料
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-footer collapse pt-3 collapse-target">
+                        <div class="mb-3">
+                            <label class="form-label">程式語言</label>
+                            <input type="text" class="form-control" name="[程式語言]">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">程式碼</label>
+                            <textarea class="form-control" name="[程式碼]" cols="30" rows="3"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary float-end prompt__copy-button">複製</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
