@@ -9,6 +9,12 @@
             integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
             crossorigin="anonymous"></script>
     <style>
+        html, body {
+            height: 100%;
+        }
+        body, .main {
+            min-height: 100%;
+        }
         .card {
             line-height: 2;
         }
@@ -69,47 +75,45 @@
     </script>
 </head>
 <body>
-<main>
-    <section class="py-2 text-center container">
-        <div class="row py-lg-5">
-            <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">ChatGPT 提示工具</h1>
-            </div>
+<section class="py-2 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">ChatGPT 提示工具</h1>
         </div>
-    </section>
-    <div class="bg-body-tertiary py-5">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col mb-3">
-                    <div class="card shadow-sm prompt">
-                        <div class="card-body">
-                            <h5 class="card-title text-success">撰寫程式</h5>
-                            <p class="card-text prompt__content" data-content="幫我用 [程式語言] 寫一個函式，它需要做到 [某個功能]">
-                                幫我用<span class="keyword">程式語言</span>寫一個函式，它需要做到<span class="keyword">某個功能</span>
-                            </p>
-                            <div class="d-flex justify-content-end">
-                                <button class="btn btn-info text-white me-2 collapse-button" type="button">
-                                    填入資料
-                                </button>
-                            </div>
+    </div>
+</section>
+<div class="bg-body-tertiary py-5 main">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col mb-3">
+                <div class="card shadow-sm prompt">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">撰寫程式</h5>
+                        <p class="card-text prompt__content" data-content="幫我用 [程式語言] 寫一個函式，它需要做到 [某個功能]">
+                            幫我用<span class="keyword">程式語言</span>寫一個函式，它需要做到<span class="keyword">某個功能</span>
+                        </p>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-info text-white me-2 collapse-button" type="button">
+                                填入資料
+                            </button>
                         </div>
-                        <div class="card-footer collapse pt-3 collapse-target">
-                            <div class="mb-3">
-                                <label class="form-label">程式語言</label>
-                                <input type="text" class="form-control" name="[程式語言]">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">某個功能</label>
-                                <textarea class="form-control" name="[某個功能]" cols="30" rows="3"></textarea>
-                            </div>
-                            <button type="button" class="btn btn-primary float-end prompt__copy-button">複製</button>
+                    </div>
+                    <div class="card-footer collapse pt-3 collapse-target">
+                        <div class="mb-3">
+                            <label class="form-label">程式語言</label>
+                            <input type="text" class="form-control" name="[程式語言]">
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">某個功能</label>
+                            <textarea class="form-control" name="[某個功能]" cols="30" rows="3"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary float-end prompt__copy-button">複製</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</main>
+</div>
 <footer class="text-body-secondary py-3 bg-dark-subtle">
     <div class="container">
         <p class="mb-1"></p>
