@@ -64,7 +64,8 @@
                         return;
                     }
 
-                    content = content.replace($(this).attr('name'), $(this).val());
+                    content = content.replaceAll('<br>', '\r\n');
+                    content = content.replaceAll($(this).attr('name'), $(this).val());
                 });
 
                 copyToClipboard($.trim(content));
@@ -115,7 +116,7 @@
                 <div class="card shadow-sm prompt">
                     <div class="card-body">
                         <h5 class="card-title text-success">撰寫測試</h5>
-                        <p class="card-text prompt__content" data-content="我有一段 [程式語言] 的程式碼，如下：[程式碼]，幫我寫一個測試，至少要提供五個測試案例，要包含到極端的狀況。">
+                        <p class="card-text prompt__content" data-content="我有一段 [程式語言] 的程式碼，如下：<br><br>[程式碼]<br><br>幫我寫一個測試，至少要提供五個測試案例，要包含到極端的狀況。">
                             我有一段<span class="keyword">程式語言</span>的程式碼，如下：<span class="keyword">程式碼</span>，幫我寫一個測試，至少要提供五個測試案例，要包含到極端的狀況。
                         </p>
                         <div class="d-flex justify-content-end">
@@ -141,7 +142,7 @@
                 <div class="card shadow-sm prompt">
                     <div class="card-body">
                         <h5 class="card-title text-success">重構程式碼</h5>
-                        <p class="card-text prompt__content" data-content="我有一段 [程式語言] 的程式碼，如下：[程式碼]，幫我重構、優化程式碼，並使用中文解釋為什麼要這樣重構。">
+                        <p class="card-text prompt__content" data-content="我有一段 [程式語言] 的程式碼，如下：<br><br>[程式碼]<br><br>幫我重構、優化程式碼，並使用中文解釋為什麼要這樣重構。">
                             我有一段<span class="keyword">程式語言</span>的程式碼，如下：<span class="keyword">程式碼</span>，幫我重構、優化程式碼，並使用中文解釋為什麼要這樣重構。
                         </p>
                         <div class="d-flex justify-content-end">
